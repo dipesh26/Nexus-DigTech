@@ -1,0 +1,31 @@
+/* General Styles */
+.portfolio {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Section Styles */
+  .portfolio-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .portfolio-intro{
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .portfolio-intro h2 {
+    font-size: 3rem;
+    color: #007bff;
+  }
