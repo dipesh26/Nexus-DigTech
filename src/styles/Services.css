@@ -1,31 +1,118 @@
 /* General Styles */
-.services {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .service-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .service-header h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  /* Section Styles */
-  .service-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .service-intro{
-    margin-top: 50px;
-    text-align: center;
-  }
-  
-  .service-intro h2 {
-    font-size: 3rem;
-    color: #007bff;
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fffbf3;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  color: #ede2cf;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: #374398;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  width: 450px;
+  height: 150px;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures title and content are spaced properly */
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease; /* Added transition for opacity */
+}
+
+/* Title Styles */
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color:black; /* Title color */
+  z-index: 2; /* Ensure the title is always visible */
+}
+
+/* Content that slides up */
+.card-details {
+  position: absolute;
+  bottom: -100%; /*Initially hidden below the card*/
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 239, 239, 0); /* Dark background for details */
+  color:rgba(4, 0, 0, 0.399);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+  padding: 0px;
+  margin: 0px;
+  transition: bottom 0.5s ease-in-out; /* Smooth slide-up effect */
+  opacity: 0; /* Initially hide content */
+}
+
+/* Hover effect: Zoom, blur, and reduce image visibility */
+.card:hover .card-image img {
+  transform: scale(1.1); /* Zoom effect on hover */
+  filter: blur(5px); /* Apply blur effect on hover */
+  opacity: 0.4; /* Decrease image visibility on hover */
+}
+
+/* Hover effect: Show the details and slide it up */
+.card:hover .card-details {
+  bottom: 0; /* Slide content up */
+  opacity: 1; /* Make the content visible */
+}
+
+.card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
