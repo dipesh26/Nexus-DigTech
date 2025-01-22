@@ -5,7 +5,8 @@ import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Blog from "./components/Blog";
-import ContactUs from "./components/ContactUs";
+import ContactUs from "./components/ContactUs"; // Uncomment this
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact-us" element={<ContactUs />} /> {/* Use ContactUs here */}
         </Routes>
       </div>
     </Router>
