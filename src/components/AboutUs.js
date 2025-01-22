@@ -25,7 +25,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="team-section">
-          <h2>Meet the Team</h2>
+          <h2>Our Team </h2>
           <div className="team-members">
             <div className="team-member">
               <img
