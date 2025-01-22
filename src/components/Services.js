@@ -10,6 +10,7 @@ const Services = () => {
       <section className="service-content">
         <div className="service-intro">
           <h2>Services that we Offer</h2>
+          <p>Hello...........</p>
         </div>
       </section>
     </div>
