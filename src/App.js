@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact-us" element={<ContactUs />} /> {/* Use ContactUs here */}
         </Routes>
-      </div>
+        </div>
     </Router>
   );
 };

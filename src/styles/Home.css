@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=DM+Serif+Text:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 /* General Styles */
 body {
   margin: 10;
@@ -11,10 +10,11 @@ body {
 /* Logo Section */
 .logo-section {
   background-color: #ffffff;
-  padding:0px;
+  /* padding:0px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .logo-container {
@@ -37,13 +37,13 @@ body {
 }
 .home {
   background-color: #fffbf3; 
+  width: 100%;
 }
 /* Home Section */
 .home-section {
   background-color: #fffbf3;
-  padding: 30px 790px;  /* Increased padding 100 tha mene 815 kiya hai */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -59,8 +59,8 @@ body {
   gap: 50px;
   margin: 0;
   align-items:center ;
-  margin-left: 570px ;  
   padding: 0;
+  margin-top: 10px;
 }
 
 .menu-item {
