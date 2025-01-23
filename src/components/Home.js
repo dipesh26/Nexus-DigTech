@@ -6,6 +6,7 @@ import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Blog from "../components/Blog";
 import ContactUs from "../components/ContactUs";
+import { Banner } from "../components/Banner.js"; // Import the Banner component
 
 const Home = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -67,7 +68,7 @@ const Home = () => {
             alt="Nexus Logo"
             className="nexus-logo"
           />
-          <h1 className="logo-text">NEXUS DIGTECH</h1>
+          <h1 className="logo-text">CHIRAG</h1>
         </div>
       </div>
 
@@ -96,6 +97,12 @@ const Home = () => {
           </button>
         </div>
       </div>
+
+      {/* Banner Section */}
+      <Banner />
+
+      {/* Wave Animation */}
+      <div className="wave"></div>
     </div>
   );
 };
