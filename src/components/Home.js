@@ -68,7 +68,7 @@ const Home = () => {
             alt="Nexus Logo"
             className="nexus-logo"
           />
-          <h1 className="logo-text">CHIRAG</h1>
+          <h1 className="logo-text">NEXUS DIGTECH</h1>
         </div>
       </div>
 

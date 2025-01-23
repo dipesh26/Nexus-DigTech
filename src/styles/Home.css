@@ -41,7 +41,7 @@ body {
 /* Home Section */
 .home-section {
   background-color: #fffbf3;
-  padding: 30px 818px;  /* Increased padding 100 tha mene 815 kiya hai */
+  padding: 30px 790px;  /* Increased padding 100 tha mene 815 kiya hai */
   display: flex;
   justify-content: center; 
   align-items: center;    

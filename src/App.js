@@ -6,7 +6,8 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Blog from "./components/Blog";
 import ContactUs from "./components/ContactUs"; // Uncomment this
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const App = () => {
   return (

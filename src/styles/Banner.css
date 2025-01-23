@@ -2,19 +2,20 @@
 
 /* General Styles */
 .banner {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background-color: #fffbf3;
     color: #fff;
+    display : flex;
     padding: 100px 20px;
     position: relative;
     text-align: left;
-    border-radius: 50px; /* Adds the curve to the box */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a floating effect */
+    /* border-radius: 50px; Adds the curve to the box */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); Optional: Adds a shadow for a floating effect */
     margin: 20px;
   }
   
   .tagline {
     font-size: 18px;
-    color: #ffd700;
+    color: #374398;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -25,6 +26,7 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 15px;
+    color: #156669;
   }
   
   h1 .txt-rotate .wrap {
@@ -67,7 +69,8 @@
   .banner img {
     max-width: 100%;
     height: auto;
-    display: block;
+    /* display: flex; */
+    display: inline;
     margin: 0 auto;
     border-radius: 20px; /* Optional: Adds a curve to the image */
   }
