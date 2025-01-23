@@ -41,7 +41,7 @@ body {
   background-color: #fffbf3;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -56,8 +56,7 @@ body {
   display: flex;
   gap: 50px;
   margin: 0;
-  align-items:center ;
-  margin-left: 570px ;  
+  align-items:center ;  
   padding: 0;
   margin-top: 20px;
 }
@@ -97,7 +96,7 @@ body {
 
 /* Active Menu Item */
 .menu-item.active {
-  color: #00aaff; /* Blue color for active item */
+  color: #00aaff; 
   font-weight: bold;
 }
 
@@ -105,7 +104,7 @@ body {
   position: absolute;
   bottom: 0;
   height: 3px;
-  background: #00aaff; /* Blue color for the active indicator */
+  background: #00aaff; 
   transition: left 0.3s ease, width 0.3s ease;
 }
 
