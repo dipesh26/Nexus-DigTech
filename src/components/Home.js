@@ -6,6 +6,7 @@ import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Blog from "../components/Blog";
 import ContactUs from "../components/ContactUs";
+import { Banner } from "../components/Banner.js"; // Import the Banner component
 
 const Home = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -96,6 +97,12 @@ const Home = () => {
           </button>
         </div>
       </div>
+
+      {/* Banner Section */}
+      <Banner />
+
+      {/* Wave Animation */}
+      <div className="wave"></div>
     </div>
   );
 };
