@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=DM+Serif+Text:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-
 /* General Styles */
 body {
-  margin: 10;
+  margin: 0;
   background-color: #fffbf3;
   font-family: "Coco Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
-/* Logo Section */
+/* Logo Section - Fixed Position at the Top */
 .logo-section {
+  position: fixed; 
   background-color: #ffffff;
-  padding:0px;
-  display: flex;
+  top: 0rem; 
   justify-content: center;
   align-items: center;
+  display: flex;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  height: 80px;
+  z-index: 1;
 }
 
 .logo-container {
@@ -30,37 +34,42 @@ body {
 
 .logo-text {
   font-size: 1.8rem;
-  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ; */
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
   font-family: "DM Serif Text", serif;
   color: #374398;
   font-weight: bold;
 }
-.home {
-  background-color: #fffbf3; 
-}
+
 /* Home Section */
 .home-section {
   background-color: #fffbf3;
-  padding: 30px 790px;  /* Increased padding 100 tha mene 815 kiya hai */
+  /* padding-top: 10rem; Add padding to prevent content overlap with the fixed logo */
+  /* padding: 2rem; */
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-    flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 80px;
 }
 
+/* Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the nav menu */
+  justify-content: center;
+  height: 50px;
 }
 
 .menu-list {
   list-style: none;
   display: flex;
-  gap: 50px;
-  margin: 0 auto;        /* Center the list horizontally */
-  align-items: center;
+  gap: 2rem;
+  margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-item {
@@ -71,7 +80,9 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: color 0.3s ease;
+  margin-top: -15px;
 }
+
 /* Hover Effect */
 .menu-item::after {
   content: "";
@@ -92,12 +103,12 @@ body {
 }
 
 .menu-item:hover {
-  color: #00aaff; /* Blue color for hover */
+  color: #00aaff;
 }
 
 /* Active Menu Item */
 .menu-item.active {
-  color: #00aaff; /* Blue color for active item */
+  color: #00aaff; 
   font-weight: bold;
 }
 
@@ -105,7 +116,7 @@ body {
   position: absolute;
   bottom: 0;
   height: 3px;
-  background: #00aaff; /* Blue color for the active indicator */
+  /* background: #00aaff;  */
   transition: left 0.3s ease, width 0.3s ease;
 }
 
@@ -148,6 +159,8 @@ body {
   right: 70px;
 }
 
+
+/* Buttons */
 .get-quote-button {
   font-family: "Cooper BT", sans-serif;
   font-size: 1.2rem;
@@ -156,6 +169,7 @@ body {
   padding: 10px 2cqmax;
   border: none;
   border-radius: 5px;
+  margin-top: 25px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
@@ -165,25 +179,89 @@ body {
   transition: all 0.3s ease;
   animation: pulse 2s infinite;
 }
-
 .get-quote-button:hover {
   background: linear-gradient(90deg, #5de0e6, #004aad);
   /* box-shadow: 0 0 5px #5de0e6, 0 0 10px #004aad; */
   transform: scale(1.1)
 }
 
-/* Pulse Animation */
-/* @keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 10px #00d4ff, 0 0 20px #8000ff;
+/* Laptop-Specific Styles */
+@media (min-width: 1920px) and (max-width: 1080px) {
+  .container {
+    max-width: 1920px; /* Increase container width for large laptops */
+    flex-direction: column;
   }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00d4ff, 0 0 30px #8000ff;
+
+  .logo-section {
+    padding: 2rem; /* Add more padding for better spacing */
   }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 10px #00d4ff, 0 0 20px #8000ff;
+
+  .nexus-logo {
+    width: 140px; /* Slightly larger logo for laptops */
   }
-} */
+
+  .logo-text {
+    font-size: 2rem; /* Increase font size for better readability */
+  }
+
+  .menu-list {
+    gap: 2.5rem; /* Slightly larger gap for navigation items */
+  }
+
+  .menu-item {
+    font-size: 1.2rem; /* Slightly larger font for menu items */
+  }
+
+  .get-quote-button {
+    font-size: 1.2rem; /* Increase button size */
+    padding: 1rem 2rem; /* Larger padding */
+  }
+}
+
+/* Adjust Header for Tablets */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0.8rem 1rem;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .logo-section {
+    margin-left: 1rem;
+  }
+
+  .nav-menu {
+    margin-right: 1rem;
+  }
+
+  .menu-list {
+    gap: 1.5rem; /* Reduced gap for smaller screens */
+  }
+
+  .menu-item {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+/* Adjust Header for Mobile Devices */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack logo and navigation vertically */
+    padding: 1rem;
+  }
+
+  .logo-section {
+    margin-left: 0; /* Center the logo */
+    justify-content: center;
+  }
+
+  .nav-menu {
+    margin-right: 0;
+    margin-top: 0.5rem;
+  }
+
+  .menu-list {
+    flex-direction: column; /* Stack navigation items */
+    gap: 1rem;
+  }
+}

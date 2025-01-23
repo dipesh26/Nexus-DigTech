@@ -6,12 +6,14 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Blog from "./components/Blog";
 import ContactUs from "./components/ContactUs"; // Uncomment this
+import Container from 'react-bootstrap/Container'
 
 
 
 const App = () => {
   return (
     <Router>
+    <Container>
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +24,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} /> {/* Use ContactUs here */}
         </Routes>
       </div>
+      </Container>
     </Router>
   );
 };

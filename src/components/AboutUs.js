@@ -1,12 +1,15 @@
 import React from "react";
 import "../styles/AboutUs.css" // CSS specific to the About Us page
+import Header from "./Header"; // Import the Header component
 
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <header className="about-header">
-        <h1>About Us</h1>
-      </header>
+     <Header /> {/* Add the Header component here */}
+      <header className="about-header">
+        <h1>About Us</h1>
+      </header>
+
       <section className="about-content">
         <div className="about-intro">
           <h2>Who We Are</h2>
