@@ -1,0 +1,130 @@
+/* Banner.css */
+
+/* General Styles */
+.banner {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    padding: 100px 20px;
+    position: relative;
+    text-align: left;
+    border-radius: 50px; /* Adds the curve to the box */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a floating effect */
+    margin: 20px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+    color: #ffd700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  h1 .txt-rotate .wrap {
+    border-right: 2px solid #ffd700;
+    animation: blink 0.75s step-end infinite;
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #d3d3d3;
+  }
+  
+  /* Button Styles */
+  button {
+    background: #ffd700;
+    border: none;
+    color: #1a1a2e;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ffbf00;
+  }
+  
+  /* Image Styling */
+  .banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px; /* Optional: Adds a curve to the image */
+  }
+  
+  /* Animations */
+  .animate__fadeIn {
+    animation: fadeIn 1.5s;
+  }
+  
+  .animate__zoomIn {
+    animation: zoomIn 1.5s;
+  }
+  
+  /* Breakpoints for Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .banner {
+      text-align: center;
+      padding: 50px 20px; /* Adjust padding for smaller screens */
+      border-radius: 30px; /* Reduce the curve for smaller screens */
+    }
+  
+    .tagline {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 16px;
+    }
+  }
+  
+  /* Custom Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  
