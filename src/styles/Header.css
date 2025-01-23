@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    margin: 0;
+    background-color: #fffbf3;
+    font-family: "Coco Gothic", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Logo Section - Fixed Position at the Top */
+  .logo-section {
+    position: fixed; 
+    background-color: #ffffff;
+    top: 0rem; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 100%; 
+    height: 80px;
+    z-index: 1;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+  }
+  
+  .nexus-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .logo-text {
+    font-size: 1.8rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-family: "DM Serif Text", serif;
+    color: #374398;
+    font-weight: bold;
+  }
+  
+  /* Home Section */
+  /* .home-section {
+    background-color: #fffbf3;
+    /* padding-top: 10rem; 
+    /* padding: 2rem; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* position: relative; */
+    /* margin-top: 80px; */
+  /* } */ 
+  
+  /* Navigation Menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 100px;
+    width: 100%;
+
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    font-size: 1rem;
+    color: #374398;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    margin-top: -15px;
+  }
+  
+  /* Hover Effect */
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+  }
+  
+  .menu-item:hover::after {
+    width: 120%;
+    height: 400%;
+  }
+  
+  .menu-item:hover {
+    color: #00aaff;
+  }
+  
+  /* Active Menu Item */
+  .menu-item.active {
+    color: #00aaff; 
+    font-weight: bold;
+  }
+  
+  .active-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    /* background: #00aaff;  */
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  
+  /* Fade-in Animation */
+  .menu-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .menu-item:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .menu-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .menu-item:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .menu-item:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .menu-item:nth-child(5) {
+    animation-delay: 0.4s; /* Add delay for Blog */
+  }
+  .menu-item:nth-child(6) {
+    animation-delay: 0.5s; /* Add delay for Contact Us */
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.cta-container {
+  position: absolute;
+  top: 17%; 
+  /* justify-content: center;
+  align-items: center; */
+  transform: translateY(-50%); /* Vertically center the container */
+  right: 50px; /* Position the button to the right */ 
+}
+
+
+/* Buttons */
+.get-quote-button {
+    justify-content: center;
+    align-items: right;
+    font-family: "Cooper BT", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, #5de0e6, #004aad);
+    padding: 10px 2cqmax;
+    border: none;
+    border-radius: 5px;
+    /* margin-top: 0px; */
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    /* box-shadow: 0 0 10px #5de0e6, 0 0 20px #004aad; */
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  .get-quote-button:hover {
+    background: linear-gradient(90deg, #5de0e6, #004aad);
+    /* box-shadow: 0 0 5px #5de0e6, 0 0 10px #004aad; */
+    transform: scale(1.1)
+  }
+  
+  /* Laptop-Specific Styles */
+  @media (min-width: 1920px) and (max-width: 1080px) {
+    .container {
+      max-width: 1920px; /* Increase container width for large laptops */
+      flex-direction: column;
+    }
+  
+    .logo-section {
+      padding: 2rem; /* Add more padding for better spacing */
+    }
+  
+    .nexus-logo {
+      width: 140px; /* Slightly larger logo for laptops */
+    }
+  
+    .logo-text {
+      font-size: 2rem; /* Increase font size for better readability */
+    }
+  
+    .menu-list {
+      gap: 2.5rem; /* Slightly larger gap for navigation items */
+    }
+  
+    .menu-item {
+      font-size: 1.2rem; /* Slightly larger font for menu items */
+    }
+  
+    .get-quote-button {
+      font-size: 1.2rem; /* Increase button size */
+      padding: 1rem 2rem; /* Larger padding */
+    }
+  }
+  
+  /* Adjust Header for Tablets */
+  @media (max-width: 1024px) {
+    .header {
+      padding: 0.8rem 1rem;
+      max-width: 100%;
+      flex-direction: column;
+    }
+  
+    .logo-section {
+      margin-left: 1rem;
+    }
+  
+    .nav-menu {
+      margin-right: 1rem;
+    }
+  
+    .menu-list {
+      gap: 1.5rem; /* Reduced gap for smaller screens */
+    }
+  
+    .menu-item {
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  }
+  
+  /* Adjust Header for Mobile Devices */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Stack logo and navigation vertically */
+      padding: 1rem;
+    }
+  
+    .logo-section {
+      margin-left: 0; /* Center the logo */
+      justify-content: center;
+    }
+  
+    .nav-menu {
+      margin-right: 0;
+      margin-top: 0.5rem;
+    }
+  
+    .menu-list {
+      flex-direction: column; /* Stack navigation items */
+      gap: 1rem;
+    }
+  }
+  

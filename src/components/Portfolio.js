@@ -1,9 +1,11 @@
 import React from "react";
-import "../styles/Portfolio.css" // CSS specific to the About Us page
+import Header from "./Header"; // Import the Header component
+import "../styles/Portfolio.css"; 
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
+      <Header /> {/* Add the Header component here */}
       <header className="portfolio-header">
         <h1>Portfolio</h1>
       </header>

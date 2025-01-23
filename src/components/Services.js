@@ -1,48 +1,40 @@
 import React from "react";
-import "../styles/Services.css"; // CSS specific to the About Us page
+import Header from "./Header"; 
+import "../styles/Services.css"; 
 
-const Card = ({ imgSrc, title, description }) => {
-  return (
-    <div className="card">
-      <div className="card-content">
-        <div className="card-image">
-          {/* Use the absolute path to the image */}
-          <img src={imgSrc} alt={title} />
-        </div>
-        <div className="card-details">
-          <h3 className="card-title">{title}</h3>
-          <p className="card-description">{description}</p>
-        </div>
+const Services = () => {
+
+  const Card = ({ imgSrc, title, description }) => { 
+    return (
+      <div className="card"> 
+        <img src={imgSrc} alt={title} /> 
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
-const App = () => {
   return (
-    <div>
-      {/* Main Heading */}
-      <h1 className="main-heading"> Our Services</h1>
-      <h3 className="heading">We Are Specialized in The Following Services</h3>
-      
+    <div className="services">
+      <Header /> 
+      <h1> Our Services</h1>
+      <h3>We Are Specialized in The Following Services</h3>
+
       <div className="card-container">
-        {/* Card 1 */}
-        <Card
-          // Use the absolute path to the image in the public folder
-          imgSrc="../Assets/Images/videoediting-img.png"
-          title="Video Editing"
-          description="This is the card content. It slides up when you hover over the card."
+        <Card 
+          imgSrc="../Assets/Images/videoediting-img.png" 
+          title="Video Editing" 
+          description="This is the card content. It slides up when you hover over the card." 
         />
-        {/* Card 2 */}
-        <Card
-          // Use the absolute path to the image in the public folder
-          imgSrc="../Assets/Images/Websitebuilding-img.png"
-          title="Website Building"
-          description="This is the card content. It slides up when you hover over the card."
+        <Card 
+          imgSrc="../Assets/Images/Websitebuilding-img.png" 
+          title="Website Building" 
+          description="This is the card content. It slides up when you hover over the card." 
         />
+        {/* Add more cards here */}
       </div>
     </div>
   );
 };
 
-export default App;
+export default Services;
