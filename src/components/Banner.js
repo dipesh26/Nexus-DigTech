@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { useNavigate } from "react-router-dom"; // Make sure this is imported
 import '../styles/Banner.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -10,8 +11,10 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = ["Video Editing", "Web Designing", "Digital Marketing"];
   const period = 2000;
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -50,6 +53,10 @@ export const Banner = () => {
     }
   };
 
+  const handleGetProposalClick = () => {
+    navigate("/contact-us"); // Navigate to the Contact Us page
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -60,24 +67,22 @@ export const Banner = () => {
                 <div
                   className={isVisible ? "animate__animated animate__fadeIn" : ""}
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">We're Creative</span>
                   <h1>
-                    Hi! I'm CHIRAG{" "}
+                    Digital Agency{" "}
                     <span
                       className="txt-rotate"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[ "Video Editing", "Web Designing", "Digital Marketing" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s.
+                    Your go-to solution for video editing, website design, and digital marketing—crafted to make your brand stand out online.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                  <button onClick={handleGetProposalClick}>
+                    Get a proposal <ArrowRightCircle size={25} />
                   </button>
                 </div>
               )}
@@ -89,8 +94,7 @@ export const Banner = () => {
                 <div
                   className={isVisible ? "animate__animated animate__zoomIn" : ""}
                 >
-                  {/* Ensure the file path matches the CSS */}
-                  <img src="../Assets/Images/NexusLogo.svg" alt="Header Img" />
+                  <img src="../assets/images/Nexus-Logo.png" alt="Header Img" />
                 </div>
               )}
             </TrackVisibility>

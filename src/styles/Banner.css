@@ -1,9 +1,6 @@
-/* Banner.css */
-
-/* General Styles */
 .banner {
   background-color: #fffbf3;
-    color: #fff;
+    color: #156669;
     display : flex;
     padding: 100px 20px;
     position: relative;
@@ -15,7 +12,7 @@
   
   .tagline {
     font-size: 18px;
-    color: #374398;
+    color: #156669;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -45,35 +42,50 @@
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 30px;
-    color: #d3d3d3;
+    color: #737373;
   }
   
   /* Button Styles */
   button {
-    background: #ffd700;
+    background: #285548;
     border: none;
-    color: #1a1a2e;
+    color: #ede2cf;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease;
   }
   
   button:hover {
-    background: #ffbf00;
+    background: #374398;
+    color: #e6dfdf;
   }
   
   /* Image Styling */
   .banner img {
     max-width: 100%;
     height: auto;
-    /* display: flex; */
+    display: flex;
     display: inline;
     margin: 0 auto;
     border-radius: 20px; /* Optional: Adds a curve to the image */
+    animation: float 3s ease-in-out infinite;
   }
+
+  /* Floating animation for the image */
+@keyframes float {
+0% {
+  transform: translateY(0); /* Initial position */
+}
+50% {
+  transform: translateY(-15px); /* Move upwards */
+}
+100% {
+  transform: translateY(0); /* Back to initial position */
+}
+}
   
   /* Animations */
   .animate__fadeIn {

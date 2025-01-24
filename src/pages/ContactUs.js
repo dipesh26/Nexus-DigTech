@@ -5,7 +5,7 @@ import "../styles/ContactUs.css"; // Ensure the path is correct
 import TrackVisibility from "react-on-screen";
 
 // Your other code follows
-const contactImg = `${process.env.PUBLIC_URL}../Assest/Images/contact-img.svg`;
+const contactImg = `${process.env.PUBLIC_URL}../assets/images/contact-img.svg`;
 
 const Contact = () => {
   const formInitialDetails = {
