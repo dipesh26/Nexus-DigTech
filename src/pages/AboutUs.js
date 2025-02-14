@@ -24,7 +24,7 @@ const AboutUs = () => {
           <p>
             Our mission is to empower businesses and individuals by providing
             solutions that make a difference. We strive to build strong
-            relationships and deliver exceptional results.
+            relationships and deliver exceptional results heyyyyyyyyyyyyyyyyy.
           </p>
         </div>
         <div className="team-section">
